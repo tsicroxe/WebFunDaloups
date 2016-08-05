@@ -1,0 +1,45 @@
+
+#wrapper{
+ width: 1000px;
+ background-color: #f0f0f5;
+ padding:10px;
+ margin: 0px auto;
+}
+#title{
+ height: 80px;
+ width: 970px;
+ border-radius: 30px;
+ text-indent: 20px;
+ padding: 10px;
+ margin: 10px;
+ line-height: 20px;
+ font-size: 22px;
+ background-color: lightgrey;
+}
+#navigation{
+ height: 335px;
+ width: 215px;
+ margin: 10px;
+ padding: 20px;
+ border-radius: 30px;
+ vertical-align: top;
+ display: inline-block;
+ background-color: lightgrey;
+}
+#essays{
+ height: 500px;
+ width: 655px;
+ margin: 10px;
+ padding: 20px;
+ border-radius: 30px;
+ display: inline-block;
+ background-color: darkgrey;
+ }
+#contact{
+ height: 60px;
+ width: 970px;
+ padding: 10px;
+ margin: 10px;
+ border-radius: 30px;
+ background-color: lightgrey;
+}
