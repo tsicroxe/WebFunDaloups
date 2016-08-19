@@ -1,0 +1,38 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#container{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+	#info{
+		border: 1px solid black;
+		margin-bottom: 20px;
+	}
+	#info th{
+		padding-right: 60px;
+	}
+	#addUser{
+		width: 380px;
+	}
+	#addUser h1{
+		border-bottom: 1px solid black;
+		padding-right: 220px;
+		margin-bottom: 20px;
+	}
+	#addUser h1, p{
+		display: inline-block;
+	}
+		#firstName{
+			margin-left: 97px;
+		}
+		#lastName{
+			margin-left: 98.5px;
+		}
+		#email{
+			margin-left: 73.5px;
+		}
+		#contact{
+			margin-left: 91px;
+		}

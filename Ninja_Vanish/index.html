@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ninja Vanish!</title>
+		<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+    	<link rel="stylesheet" type="text/css" href="styles.css">
+    	<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    	<script>
+    	$(document).ready(function(){
+   			$('img').click(function(){
+      			$(this).hide();
+      			console.log($(this));
+   			});
+   			$('button').click(function(){
+   				$('.pic').show();
+   			});
+
+   		});
+    	</script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>jQuery assignment - Ninja Vanish!</h1>
+			<div id="first_row">
+				<img class="pic" id="r1a" src="images/ninja.png" alt="ninja">
+				<img class="pic" id="r1b" src="images/ninja.png" alt="ninja">
+				<img class="pic" id="r1c" src="images/ninja.png" alt="ninja">
+				<img class="pic" id="r1d" src="images/ninja.png" alt="ninja">
+			</div>
+			<div id="second_row">
+				<img class="pic" id="r2a" src="images/ninja.png" alt="ninja">
+				<img class="pic" id="r2b" src="images/ninja.png" alt="ninja">
+				<img class="pic" id="r2c" src="images/ninja.png" alt="ninja">
+				<img class="pic" id="r2d" src="images/ninja.png" alt="ninja">
+			</div>
+			<button>Ninja Attack!</button>
+		</div>
+	</body>

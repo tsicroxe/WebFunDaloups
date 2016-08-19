@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JQuery Functions</title>
+		<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+    	<link rel="stylesheet" type="text/css" href="styles.css">
+    	<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    	<script>
+    	$(document).ready(function(){
+ 			$(function() {
+   				$('.template button').hover(function(){
+      				$(this).css('background-color', 'white');
+   			},
+  			function(){
+      			$(this).css('background-color', '');
+   			});
+
+    		$('#click button').click(function(){
+    			alert('You clicked it!');
+    		});
+
+    		$('#focus button').focus(function(){
+    			$('#focus p').html("You clicked on the focus");
+    		});
+
+    		$('#addClass button').click(function(){
+    			$('#addClass p').addClass('white');
+    		})
+
+    		$('#val button').click(function(){
+    			var value = $('#val textarea').val();
+    			$('#val p:last').text(value);
+    		});
+    		$('#text button').click(function(){
+    			$('#text p:last').text("That text was stupid, let's add some different text! Note: notice that <b>will add the tags. You need to use html if you want it to change</b>");
+    		});
+    		$('#attr button').click(function(){
+    			$('#navbar ul li a').attr("href", "http://www.google.com");
+    		});
+
+    		$('#html button').click(function(){
+    			$('#html p:last').html("That text was stupid, let's add some different text! Note: notice that <b>will add the tags. You need to use html if you want it to change</b>");
+    		});
+    		var datalog = [];
+    		$('#data button').click(function(){
+    			firstName = ["heezy!", "Andrew", "Bob"]
+    				alert("Hi, " + firstName[0]);
+
+    		});
+    		$('#before button').click(function(){
+    			$('#before p:first').before("<p>I'm going to add a paragraph up here!</p>");
+    		});
+        	$('#after button').click(function(){
+    			$('#after p:first').after("<p>I'm going to add a paragraph down here!</p>");
+    		}); 
+        	$('#append button').click(function(){
+    			$('#append p:first').after(" I'm going to add a little something extra after the paragraph here!");
+    			});
+    		$('#show_hide button:first-child').click(function(){
+    			$('#show_hide p').hide();
+    			});
+    		$('#show_hide button:last-of-type').click(function(){
+    			$('#show_hide p').show();
+    			});
+    		$('#toggle button').click(function(){
+    			$('#toggle p').toggle();
+    			});
+    		$('#fade button:first-child').click(function(){
+    			$('#fade p').fadeIn();
+    			});
+    		});
+    		$('#fade button:last-of-type').click(function(){
+    			$('#fade p').fadeOut();
+    			});
+    		$('#slide button:first-child').click(function(){
+    			$('#slide p').slideUp();
+    			});
+    		$('#slide button:last-of-type').click(function(){
+    			$('#slide p').slideDown();
+    			});
+    		$('#slide_toggle button').click(function(){
+    			$('#slide_toggle p').slideToggle();
+    			});
+ 			});
+    	</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="navbar">
+				<ul>
+					<li><a href="#click">.click</a></li>
+					<li><a href="#focus">.focus</a></li>
+					<li><a href="#addClass">.addClass</a></li>
+					<li><a href="#val">.val</a></li>
+					<li><a href="#text">.text</a></li>
+					<li><a href="#attr">.attr</a></li>
+					<li><a href="#html">.html</a></li>
+					<li><a href="#data">.data</a></li>
+					<li><a href="#before">.before</a></li>
+					<li><a href="#after">.after</a></li>
+					<li><a href="#append">.append</a></li>
+					<li><a href="#show_hide">.show</a></li>
+					<li><a href="#show_hide">.hide</a></li>
+					<li><a href="#toggle">.toggle</a></li>
+					<li><a href="#fade">.fadeIn</a></li>
+					<li><a href="#fade">.fadeOut</a></li>
+					<li><a href="#slide">.slideDown</a></li>
+					<li><a href="#slide">.slideUp</a></li>
+					<li><a href="#slide_toggle">.slideToggle</a></li>
+				</ul>
+			</div>
+			<div id="main">
+				<div id="click" class="template">
+					<button>.click me!</button>
+					<h1>.click</h1>
+					<p>Bind an event handler to the “click” JavaScript event, or trigger that event on an element.</p>
+				</div>
+				<div id="focus" class="template">
+					<button>.focus me!</button>
+					<h1>.focus</h1>
+					<p>Bind an event handler to the “focus” JavaScript event, or trigger that event on an element.</p>
+				</div>
+				<div id="addClass" class="template">
+					<button>.addClass me!</button>
+					<h1>.addClass</h1>
+					<p>Adds the specified class(es) to each element in the set of matched elements.</p>
+					<p>Example: Let's turn our text white</p>
+				</div>
+				<div id="val" id="val" class="template">
+				<button>.val me!!</button>
+					<h1>.val</h1>
+					<textarea></textarea>
+					<p>Get the current value of the first element in the set of matched elements or set the value of every matched element.</p>
+					<p>Try replacing the example text with new text you've entered.</p>
+				</div>
+				<div id="text" class="template">
+					<button>.text me!</button>
+					<h1>.text</h1>
+					<p>Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.</p>
+				</div>
+				<div id="attr" class="template">
+					<button>.attr me!</button>
+					<h1>.attr</h1>
+					<p>Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.</p>
+					<p> Pushing the button will change navbar links to google.com</p>
+				</div>
+				<div id="html" class="template">
+					<button>.html me!</button>
+					<h1>.html</h1>
+					<p>Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element.</p>
+				</div>
+				<div id="data" class="template">
+					<button>.data me!</button>
+					<h1>.data</h1>
+					<p>Store arbitrary data associated with the matched elements or return the value at the named data store for the first element in the set of matched elements.</p>
+				</div>
+				<div id="before" class="template">
+					<button>.before me!</button>
+					<h1>.before</h1>
+					<p>Insert content, specified by the parameter, before each element in the set of matched elements.</p>
+				</div>
+				<div id="after" class="template">
+					<button>.after me!</button>
+					<h1>.after</h1>
+					<p>Insert content, specified by the parameter, after each element in the set of matched elements.</p>
+				</div>
+				<div id="append" class="template">
+					<button>.append me!</button>
+					<h1>.append</h1>
+					<p>Insert content, specified by the parameter, to the end of each element in the set of matched elements.</p>
+				</div>
+				<div id="show_hide" class="template">
+					<button>.hide me!</button>
+					<button>.show me!</button>
+					<h1>.hide and .show</h1>
+					<p>Hide: Hide the matched elements by fading them to transparent.</p>
+					<p>Show: Display the matched elements.</p>
+				</div>
+				<div id="toggle" class="template">
+					<button>.toggle me!</button>
+					<h1>.toggle</h1>
+					<p>Display or hide the matched elements.</p>
+				</div>
+				<div id="fade" class="template">
+					<button>.fadeIn me!</button>
+					<button>.fadeOut me!</button>
+					<h1>.fadeIn and .fadeOut</h1>
+					<p>fadeIn: Display the matched elements by fading them to opaque.</p>
+					<p>fadeOut: Hide the matched elements by fading them to transparent.</p>
+				</div>
+				<div id="slide" class="template">
+					<button>.slideUp me!</button>
+					<button>.slideDown me!</button>
+					<h1>.slideUp and .slideDown</h1>
+					<p>slideUp: Hide the matched elements with a sliding motion.</p>
+					<p>slideDown: Display the matched elements with a sliding motion.</p>
+				</div>
+				<div id="slide_toggle" class="template">
+					<button>.slideToggle me!</button>
+					<h1>.slideToggle</h1>
+					<p>slideToggle: Display or hide the matched elements with a sliding motion.</p>
+				</div>
+			</div>
+		</div>
+	</body>
